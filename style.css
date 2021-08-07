@@ -36,6 +36,15 @@ header {
     top: 0;
     right: -20rem;
     transition: all 1s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar ul li{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .show .sidebar {
