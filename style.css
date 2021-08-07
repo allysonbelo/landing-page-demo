@@ -7,17 +7,39 @@
 }
 
 body {
-    overflow-x: hidden;
-    background-color: cadetblue;
+    width: 100%;
+    height: 500vh;
+    background-color: chocolate;
 }
 
 header {
+    width: 100%;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1rem;
+    position: fixed;
     background-color: #eee;
-    position: relative;
+    padding: .5rem;
+    transition: all .3s;
+}
+
+.scrolling {
+    height: 3.5rem;
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+}
+
+.show .sidebar {
+    right: 0;
 }
 
 .menu {
@@ -26,33 +48,16 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     transition: all 1s;
+    z-index: 9;
 }
 
 .show .menu {
-    right: 15rem;
+    margin-right: 16rem;
 }
 
 .line {
     width: 100%;
     height: .2rem;
     background-color: #000;
-    border: none;
-}
-
-.sidebar {
-    width: 20rem;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: -20rem;
-    background-color: red;
-    transition: all 1s;
-}
-
-.show .sidebar {
-    right: 0;
 }
