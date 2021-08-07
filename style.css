@@ -6,15 +6,16 @@
     text-decoration: none;
 }
 
-body{
+body {
     overflow-x: hidden;
+    background-color: cadetblue;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem 1rem;
     background-color: #eee;
     position: relative;
 }
@@ -25,20 +26,33 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 1s;
+}
+
+.show .menu {
+    right: 15rem;
 }
 
 .line {
     width: 100%;
-    height: .3rem;
+    height: .2rem;
     background-color: #000;
+    border: none;
 }
 
 .sidebar {
     width: 20rem;
     height: 100vh;
-    background-color: red;
     position: absolute;
     top: 0;
     right: -20rem;
-    display: none;
+    background-color: red;
+    transition: all 1s;
+}
+
+.show .sidebar {
+    right: 0;
 }
