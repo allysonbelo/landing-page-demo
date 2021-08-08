@@ -234,4 +234,31 @@ header {
 font-size: .8rem;
 }
 
+.sessao-check{
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-check .wrapper-img{
+    margin-bottom: 2rem;
+}
+
+.sessao-check h2{
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.sessao-check p{
+    font-size: 1.1rem;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
 
