@@ -7,15 +7,16 @@
 }
 
 html{
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 
 body {
     width: 100%;
-    background-color: #eee;
+    background-color: rgb(250, 250, 250);
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 .logo-wrapper{
@@ -246,18 +247,54 @@ font-size: .8rem;
     margin-bottom: 2rem;
 }
 
-.sessao-check h2{
+.titulo-h2{
     font-size: 2rem;
     text-align: center;
     width: 80%;
     margin-bottom: 2rem;
 }
 
-.sessao-check p{
+.paragrafo-p{
     font-size: 1.1rem;
     text-align: center;
     width: 80%;
     margin-bottom: 1rem;
+}
+
+.sessao-services{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-group{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas: 
+    "column1";
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service img{
+    margin-bottom: .5rem;
+}
+
+.service h4{
+    margin-bottom: 1rem;
+}
+
+.service p{
+    text-align: center;
+    width: 80%;
+    margin-bottom: 3rem;
 }
 
 
