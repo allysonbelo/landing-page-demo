@@ -14,7 +14,7 @@ html {
 
 body {
     width: 100%;
-    background-color: rgb(250, 250, 250);
+    background-color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
@@ -69,6 +69,7 @@ header {
     top: 0;
     right: -15rem;
     transition: all 1s;
+    opacity: .95;
 
     display: flex;
     flex-direction: column;
@@ -77,13 +78,13 @@ header {
     z-index: 9999;
 }
 
-.sidebar hr{
+.sidebar hr {
     width: 80%;
     background-color: white;
 }
 
 
-.icon-sidebar{
+.icon-sidebar {
     color: white;
 }
 
@@ -177,17 +178,19 @@ header {
     width: 90%;
 }
 
-.sessao-intro h1 {
+.intro-content h1 {
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
     font-size: 2.1rem;
+    margin-bottom: 1rem;
 }
 
-.sessao-intro p {
+.intro-content p {
     text-align: center;
     font-weight: normal;
     font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .btn-intro {
@@ -225,7 +228,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .sessao-works h2 {
@@ -274,7 +276,15 @@ header {
     margin-bottom: 2rem;
 }
 
+.intro-content-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .titulo-h2 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
     width: 80%;
@@ -311,6 +321,12 @@ header {
     justify-content: center;
 }
 
+.content-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .service img {
     margin-bottom: .5rem;
 }
@@ -338,7 +354,7 @@ header {
     z-index: 0;
 }
 
-.img-circle{
+.img-circle {
     position: absolute;
     width: 52%;
     left: -4rem;
@@ -354,11 +370,11 @@ header {
     margin-bottom: 2rem;
 }
 
-.column-left a{
+.column-left a {
     color: white;
 }
 
-.depoimentos-cards{
+.depoimentos-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -379,47 +395,47 @@ header {
 
 }
 
-.sessao-depoimentos h2{
+.sessao-depoimentos h2 {
     color: white;
 }
 
-.sessao-depoimentos .card p{
+.sessao-depoimentos .card p {
     font-style: italic;
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
-.person{
+.person {
     width: 100%;
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: start;
     column-gap: 1rem;
 }
 
-.profile{
+.profile {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-.person img{
+.person img {
     width: 60px;
     margin: 0;
 }
 
-.person .profile h4{
+.person .profile h4 {
     margin: 0;
 }
 
-.person .profile p{
+.person .profile p {
     font-style: normal;
     font-size: .8rem;
     margin: 0;
 }
 
-footer{
+footer {
     width: 100%;
     background-color: #fff;
     display: grid;
@@ -429,27 +445,27 @@ footer{
     box-shadow: 0 0 0.8rem rgba(0, 0, 0, .5);
 }
 
-.footer-column1{
+.footer-column1 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.footer-column1 .logo-wrapper{
+.footer-column1 .logo-wrapper {
     display: flex;
     column-gap: 1rem;
     align-items: center;
     justify-content: center;
 }
 
-.footer-column1 p{
+.footer-column1 p {
     margin-top: 1rem;
     width: 80%;
     text-align: center;
 }
 
-.footer-column2{
+.footer-column2 {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
@@ -458,26 +474,349 @@ footer{
     font-size: 1.5rem;
 }
 
-.footer-column2 i{
+.footer-column2 i {
     transition: all .3s;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
+    border-radius: .4rem;
 }
 
-.footer-column2 i:hover{
+.footer-column2 i:hover {
     transform: scale(1.1);
     background-color: #6C63FF;
     color: white;
     border-radius: .4rem;
 }
 
-.footer-column3{
+.footer-column3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .sessao-intro {
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .intro-content {
+        width: 423px;
+        height: 327px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .intro-content h1 {
+        font-size: 44px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .border-bottom {
+        background-color: #B7B3B3;
+        width: 52px;
+        height: 3px;
+        margin-bottom: 1rem;
+    }
+
+    .intro-content p {
+        font-size: 20px;
+        width: 381px;
+        text-align: left;
+    }
+
+    .wrapper-img {
+        width: 509px;
+        height: 364px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrapper-img img {
+        height: 100%;
+        object-fit: contain;
+        margin: 0;
+    }
+
+    .btn-intro {
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .btn {
+        width: 146px;
+        height: 50px;
+    }
+
+    .sessao-works {
+        width: 997px;
+        height: 100vh;
+        padding-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .sessao-works h2 {
+        font-size: 44px;
+        font-weight: 600;
+    }
+
+    .sessao-works p {
+        width: 587px;
+        font-size: 25px;
+        margin-bottom: 80px;
+    }
+
+    .group-cards {
+        display: flex;
+    }
+
+    .card img {
+        width: 207px;
+        height: 207px;
+        margin-bottom: 56px;
+    }
+
+    .card h4 {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .card p {
+        width: 337px;
+        font-size: 14px;
+    }
+
+    .sessao-check {
+        width: 100%;
+        height: 580px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #FFFCFC;
+        background-image: url(./img/circle.png);
+        background-repeat: no-repeat;
+        background-size: 305px;
+    }
+
+    .sessao-check .wrapper-img {
+        width: 50%;
+        height: 298px;
+        margin: 0;
+    }
+
+    .intro-content-check {
+        height: 298px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .intro-content-check h2 {
+        font-size: 40px;
+        padding-bottom: 12px;
+    }
+
+    .intro-content-check h2,
+    .intro-content-check p {
+        text-align: left;
+        margin: 0;
+    }
+
+    .intro-content-check p {
+        margin-bottom: 17px;
+        width: 399px;
+        font-size: 20px;
+    }
+
+    .intro-content-check .border-bottom {
+        height: 3px;
+        margin-bottom: 36px;
+    }
+
+    .intro-content-check .btn {
+        background-color: #fff;
+        border: none;
+        width: 163px;
+        margin: 0;
+        padding: 0;
+        color: #6C63FF;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .sessao-services {
+        width: 100%;
+        height: 100vh;
+
+        background: #fff url(./img/losango.png)no-repeat center center/80%;
+    }
+
+    .sessao-services h2 {
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 26px;
+    }
+
+    .sessao-services .border-bottom {
+        width: 49px;
+        margin-bottom: 36px;
+    }
+
+    .sessao-services p {
+        color: #B7B3B3;
+        font-size: 18px;
+        margin-bottom: 39px;
+    }
+
+    .services-group {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-areas:
+            "column1 column2";
+        gap: 1rem;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+        margin-bottom: 106px;
+    }
+
+    .service img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+    .content-services {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .content-services h4 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .content-services p {
+        font-size: 16px;
+        color: #B7B3B3;
+        margin: 0;
+        text-align: left;
+    }
+
+    .img-circle {
+        display: none;
+    }
+
+    .sessao-depoimentos {
+        flex-direction: row;
+        background-image: url(./img/circle.png);
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-position-y: top;
+        background-size: 22%;
+    }
+
+    .depoimnetos-content {
+        margin-right: 170px ;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .depoimnetos-content h2 {
+        text-align: left;
+        width: 152px;
+        font-size: 33px;
+        font-weight: 100;
+        font-style: italic;
+        margin-right: 170px;
+    }
+
+    .depoimentos-cards {
+        display: grid;
+        grid-template-areas: "column1 column2 column3";
+        column-gap: 19px;
+    }
+
+    .depoimentos-cards .card {
+        width: 100%;
+        width: 298px;
+        height: 306px;
+        padding: 0;
+    }
+
+    .card img {
+        width: 59px;
+        height: 59px;
+        margin: 0;
+        margin-left: 26px;
+    }
+
+    .card p {
+        width: 218px;
+        font-size: 20px;
+        margin: 23px 54px 25px 28px;
+    }
+
+    .profile {
+        display: flex;
+        width: 10rem;
+        height: 50px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: space-around;
+        height: 200px;
+    }
+
+    /*logo*/
+    .footer-column1 {
+        order: 3;
+    }
+
+    .footer-column1 p {
+        display: none;
+    }
+
+    /*social*/
+    .footer-column2 {
+        order: 2;
+    }
+
+    /*direitos*/
+    .footer-column3 {
+        order: 1;
+
+    }
+
 }
