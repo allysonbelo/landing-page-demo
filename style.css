@@ -176,7 +176,7 @@ header {
 .wrapper-img img {
     margin-top: 4rem;
     width: 90%;
-    animation: zoom 2s both;
+    animation: zoom 3s both;
 }
 
 
@@ -187,15 +187,21 @@ header {
     font-size: 2.1rem;
     margin-bottom: 1rem;
     opacity: 0;
-    animation: zoom 3s;
+    animation: moveUp 2s forwards;
 }
 
+.border-bottom{
+    opacity: 0;
+    animation: moveUp 3s forwards;
+}
 
 .intro-content p {
     text-align: center;
     font-weight: normal;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveUp 4s forwards;
 }
 
 .btn-intro {
@@ -214,11 +220,13 @@ header {
     background-color: #6C63FF;
     color: white;
     border: 1px solid black;
+    animation: moveUp 5s both;
 }
 
 .btn:nth-child(2) {
     background-color: white;
     color: black;
+    opacity: 0;
     border: 1px solid #ccc;
 }
 
@@ -855,7 +863,7 @@ footer {
         transform: translateY(10rem) rotateY(-30deg);
     }
     100%{
-        transform: translateY(0) rotateY(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
