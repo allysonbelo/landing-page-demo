@@ -13,3 +13,25 @@ window.addEventListener("scroll", function () {
 const p = document.querySelector("#posicao")
 const posicoes = p.getBoundingClientRect()
 console.log(posicoes)
+
+
+//animando elementos com scroll da página
+const target = document.querySelectorAll("[data-anime]")
+const animationClass = "animate"
+
+function animeScroll() {
+    const windowTop = window.scrollY + ((window.innerHeight * 3) / 4 + -50)
+    target.forEach(function (element) {
+        if ((windowTop) > element.offsetTop) {
+            element.classList.add(animationClass)
+        } else {
+            element.classList.remove(animationClass)
+        }
+    })
+}
+
+animeScroll()
+
+window.addEventListener('scroll', function () {
+    animeScroll()
+})

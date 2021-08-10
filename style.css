@@ -176,7 +176,9 @@ header {
 .wrapper-img img {
     margin-top: 4rem;
     width: 90%;
+    animation: zoom 2s both;
 }
+
 
 .intro-content h1 {
     font-size: 2rem;
@@ -184,7 +186,9 @@ header {
     text-align: center;
     font-size: 2.1rem;
     margin-bottom: 1rem;
+    animation: zoom 3s;
 }
+
 
 .intro-content p {
     text-align: center;
@@ -272,8 +276,13 @@ header {
     align-items: center;
 }
 
-.sessao-check .wrapper-img {
+.sessao-check .wrapper-img{
     margin-bottom: 2rem;
+}
+
+.sessao-check .wrapper-img img{
+    width: 90%;
+    animation: none;
 }
 
 .intro-content-check {
@@ -563,11 +572,10 @@ footer {
     .sessao-works {
         width: 997px;
         height: 100vh;
-        padding-top: 10rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .sessao-works h2 {
@@ -664,7 +672,7 @@ footer {
     .sessao-services {
         width: 100%;
         height: 100vh;
-
+        overflow: hidden;
         background: #fff url(./img/losango.png)no-repeat center center/80%;
     }
 
@@ -733,20 +741,31 @@ footer {
     }
 
     .sessao-depoimentos {
+        width: 100%;
         flex-direction: row;
+        position: relative;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .sessao-depoimentos::before {
+        content: "";
+        width: 120%;
+        height: 100%;
+        position: absolute;
+        top: 51px;
+        left: -83px;
         background-image: url(./img/circle.png);
         background-repeat: no-repeat;
-        background-position-x: left;
-        background-position-y: top;
-        background-size: 22%;
+        background-size: 20%;
     }
 
     .depoimnetos-content {
-        margin-right: 170px ;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
+
 
     .depoimnetos-content h2 {
         text-align: left;
@@ -754,13 +773,13 @@ footer {
         font-size: 33px;
         font-weight: 100;
         font-style: italic;
-        margin-right: 170px;
+        margin-right: 65px;
     }
 
     .depoimentos-cards {
         display: grid;
         grid-template-areas: "column1 column2 column3";
-        column-gap: 19px;
+        column-gap: 8px;
     }
 
     .depoimentos-cards .card {
@@ -770,7 +789,7 @@ footer {
         padding: 0;
     }
 
-    .card img {
+    .depoimentos-cards .card img {
         width: 59px;
         height: 59px;
         margin: 0;
@@ -785,8 +804,6 @@ footer {
 
     .profile {
         display: flex;
-        width: 10rem;
-        height: 50px;
         justify-content: center;
         margin: 0;
         padding: 0;
@@ -819,4 +836,48 @@ footer {
 
     }
 
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 90%;
+    }
+}
+
+@keyframes moveUp{
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+/*animação*/
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-40px, 0, 0);
+}
+
+[data-anime="center"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(40px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
