@@ -6,7 +6,8 @@
     text-decoration: none;
 }
 
-html, body{
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -194,7 +195,7 @@ header {
     animation: moveUp 2s forwards;
 }
 
-.border-bottom{
+.border-bottom {
     opacity: 0;
     animation: moveUp 3s forwards;
 }
@@ -225,6 +226,7 @@ header {
     color: white;
     border: 1px solid black;
     animation: moveUp 5s both;
+    cursor: pointer;
 }
 
 .btn:nth-child(2) {
@@ -289,11 +291,11 @@ header {
     align-items: center;
 }
 
-.sessao-check .wrapper-img{
+.sessao-check .wrapper-img {
     margin-bottom: 2rem;
 }
 
-.sessao-check .wrapper-img img{
+.sessao-check .wrapper-img img {
     width: 90%;
     animation: none;
 }
@@ -575,7 +577,7 @@ footer {
     .btn-intro {
         align-items: flex-end;
         justify-content: flex-start;
-        
+
     }
 
     .btn-intro .btn {
@@ -867,11 +869,12 @@ footer {
     }
 }
 
-@keyframes moveUp{
-    0%{
+@keyframes moveUp {
+    0% {
         transform: translateY(10rem) rotateY(-30deg);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
