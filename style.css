@@ -593,6 +593,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        
     }
 
     .sessao-works h2 {
@@ -608,6 +609,8 @@ footer {
 
     .group-cards {
         display: flex;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .card img {
@@ -819,7 +822,7 @@ footer {
     .card p {
         width: 218px;
         font-size: 20px;
-        margin: 23px 54px 25px 28px;
+        margin: 23px auto;
     }
 
     .profile {
